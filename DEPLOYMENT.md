@@ -23,14 +23,14 @@ Before deploying, verify that:
 In Vercel Dashboard → Settings → Environment Variables, add:
 
 ```
-RESEND_API_KEY=re_Daa1j8ed_5Q9fTJbFJpvYmkX7MJcEoPSf
+RESEND_API_KEY=your_resend_api_key_here
 FROM_EMAIL=noreply@zurichfaststring.ch
 ADMIN_EMAIL=info@zurichfaststring.ch
-ADMIN_PASSWORD=admin123
-DATABASE_URL=<your_postgres_url>
+ADMIN_PASSWORD=your_secure_admin_password_here
+DATABASE_URL=your_postgres_connection_string_here
 ```
 
-⚠️ **IMPORTANT**: Change `ADMIN_PASSWORD` to a secure password!
+⚠️ **IMPORTANT**: Use your actual Resend API key and create a STRONG admin password!
 
 ### Step 3: Setup PostgreSQL Database
 

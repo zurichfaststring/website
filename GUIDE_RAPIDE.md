@@ -15,18 +15,17 @@ Créez un fichier `.env` :
 
 ```env
 DATABASE_URL="file:./dev.db"
-ADMIN_EMAIL="info@zurichfaststring.ch"
-ADMIN_PASSWORD="admin123"
-NEXTAUTH_SECRET="votre-secret-key"
-NEXTAUTH_URL="http://localhost:3000"
+ADMIN_EMAIL="your_admin_email@example.com"
+ADMIN_PASSWORD="your_secure_password_here"
+RESEND_API_KEY="your_resend_api_key_here"
+FROM_EMAIL="noreply@yourdomain.com"
 ```
 
 ### 3. Accéder à l'application
 
 - **Site client** : http://localhost:3000
 - **Admin** : http://localhost:3000/admin
-  - Email : `info@zurichfaststring.ch`
-  - Mot de passe : `admin123`
+  - Utilisez les credentials que vous avez définis dans `.env.local`
 
 ## 📊 Base de données Prisma
 

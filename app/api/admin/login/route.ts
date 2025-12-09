@@ -5,8 +5,12 @@ export async function POST(request: NextRequest) {
     const { email, password } = await request.json();
 
     // Get admin credentials from environment variables
-    const adminEmail = process.env.ADMIN_EMAIL || "info@zurichfaststring.ch";
-    const adminPassword = process.env.ADMIN_PASSWORD || "admin123";
+    const adminEmail = process.env.ADMIN_EMAIL;
+    const adminPassword = process.env.ADMIN_PASSWORD;
+
+    if (!adminEmail || !adminPassword) {
+      return NextResponse.json({ error: "Admin credentials not configured" }, { status: 500 });
+    }
 
     if (email === adminEmail && password === adminPassword) {
       return NextResponse.json({ success: true }, { status: 200 });

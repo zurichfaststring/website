@@ -49,16 +49,13 @@ Créez un fichier `.env` à la racine du projet :
 # Base de données
 DATABASE_URL="file:./dev.db"
 
-# Admin (à changer en production)
-ADMIN_EMAIL="info@zurichfaststring.ch"
-ADMIN_PASSWORD="admin123"
+# Admin credentials (SET YOUR OWN!)
+ADMIN_EMAIL="your_admin_email@example.com"
+ADMIN_PASSWORD="your_secure_password_here"
 
-# NextAuth (optionnel pour le MVP)
-NEXTAUTH_SECRET="your-secret-key-change-in-production"
-NEXTAUTH_URL="http://localhost:3000"
-
-# Email (optionnel - à configurer plus tard)
-# RESEND_API_KEY="votre-clé-api-resend"
+# Email service (Resend)
+RESEND_API_KEY="your_resend_api_key_here"
+FROM_EMAIL="noreply@yourdomain.com"
 ```
 
 3. **Initialiser la base de données**
@@ -88,11 +85,9 @@ Accédez à [http://localhost:3000](http://localhost:3000)
 
 ### Accès admin
 - **Tableau de bord** : http://localhost:3000/admin
-- **Identifiants par défaut** :
-  - Email : `info@zurichfaststring.ch`
-  - Mot de passe : `admin123`
+- **Identifiants** : Utilisez ceux définis dans votre `.env.local`
 
-⚠️ **Important** : Changez ces identifiants avant de déployer en production !
+⚠️ **Important** : Utilisez un mot de passe fort et ne le partagez jamais publiquement !
 
 ## 📋 Structure du projet
 
