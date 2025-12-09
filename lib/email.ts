@@ -7,8 +7,19 @@ import AdminBookingNotification from '@/emails/AdminBookingNotification';
 import { format } from 'date-fns';
 import { fr, de, enUS } from 'date-fns/locale';
 
-// Initialize Resend avec la clé API
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend lazily to avoid errors during build
+let resendInstance: Resend | null = null;
+
+function getResend() {
+  if (!resendInstance) {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      throw new Error('RESEND_API_KEY is not configured');
+    }
+    resendInstance = new Resend(apiKey);
+  }
+  return resendInstance;
+}
 
 // Email de l'expéditeur (doit être vérifié sur Resend)
 const FROM_EMAIL = process.env.FROM_EMAIL || 'onboarding@resend.dev';
@@ -97,7 +108,7 @@ export async function sendBookingConfirmationEmails(booking: BookingEmailData) {
       ? 'Confirmation de votre réservation - Zurich Fast String'
       : 'Booking Confirmation - Zurich Fast String';
     
-    const clientEmailResult = await resend.emails.send({
+    const clientEmailResult = await getResend().emails.send({
       from: FROM_EMAIL,
       to: booking.clientEmail,
       subject: clientSubject,
@@ -129,7 +140,7 @@ export async function sendBookingConfirmationEmails(booking: BookingEmailData) {
       }
     );
     
-    const adminEmailResult = await resend.emails.send({
+    const adminEmailResult = await getResend().emails.send({
       from: FROM_EMAIL,
       to: ADMIN_EMAIL,
       subject: `Nouvelle réservation de ${booking.clientName}`,
