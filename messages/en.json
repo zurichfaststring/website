@@ -1,0 +1,169 @@
+{
+  "nav": {
+    "reserve": "Book",
+    "admin": "Admin"
+  },
+  "hero": {
+    "badge": "Fast Stringing in Zurich",
+    "title": "Your racket in",
+    "titleHighlight": "good hands",
+    "description": "Fast stringing in Zurich. Guaranteed quality, express delivery, transparent pricing.",
+    "descriptionHighlight": "Book online in 2 minutes.",
+    "reserveNow": "Book now",
+    "priceInfo": "TWINT or Cash • 25 CHF",
+    "location": "Drop-off/Pick-up: 8037 Zurich",
+    "locationDetails": "Exact address will be provided via email after booking",
+    "contactTitle": "Questions? Contact us"
+  },
+  "howItWorks": {
+    "title": "How it works?",
+    "subtitle": "Book your stringing in 3 simple steps",
+    "step1": {
+      "title": "Book online",
+      "description": "Choose your date and time slot, enter your stringing details in just a few clicks."
+    },
+    "step2": {
+      "title": "Drop off your racket",
+      "description": "Bring your racket directly to the reserved time slot. In-person drop-off only."
+    },
+    "step3": {
+      "title": "Pick up your racket",
+      "description": "Notification as soon as ready. In-person pickup within 24-48h."
+    }
+  },
+  "features": {
+    "title": "Why choose us?",
+    "subtitle": "A quality service with concrete advantages",
+    "price": {
+      "title": "Fixed price",
+      "value": "25 CHF",
+      "description": "per racket<br/>(labor only)"
+    },
+    "speed": {
+      "title": "Fast delivery",
+      "value": "24-48h",
+      "description": "standard<br/>processing time"
+    },
+    "local": {
+      "title": "Zurich Area",
+      "value": "Local",
+      "description": "service based<br/>in Zurich"
+    },
+    "booking": {
+      "title": "Simple booking",
+      "value": "Online",
+      "description": "book your<br/>slot 24/7"
+    }
+  },
+  "cta": {
+    "badge": "Available now",
+    "title": "Ready to get your racket strung?",
+    "description": "Book your slot in 2 minutes. Simple, fast, efficient.",
+    "reserve": "Book now",
+    "paymentInfo": "TWINT or Cash",
+    "deliveryInfo": "Delivery 24-48h"
+  },
+  "footer": {
+    "description": "Fast tennis racket stringing in Zurich.",
+    "quickLinks": "Quick links",
+    "home": "Home",
+    "booking": "Book",
+    "admin": "Admin",
+    "contactTitle": "Contact & Location",
+    "location": "Drop-off/Pick-up: 8037 Zurich",
+    "locationNote": "Exact address will be provided via email after booking",
+    "schedule": "Mon-Sat: 9am-6pm",
+    "copyright": "© 2025 Zurich Fast String. All rights reserved."
+  },
+  "booking": {
+    "title": "Booking",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Confirm booking",
+    "steps": {
+      "date": "Date",
+      "details": "Details",
+      "contact": "Contact"
+    },
+    "dateStep": {
+      "title": "Choose a date",
+      "timeSlot": "Time slot",
+      "morning": "Morning before 10am",
+      "morningDesc": "Drop-off before 10am",
+      "afternoon": "Afternoon after 6pm",
+      "afternoonDesc": "Drop-off after 6pm",
+      "notAvailable": "This date is not available. Capacity reached (2 rackets/day).",
+      "available": "This date is fully available.",
+      "slotsRemaining": "slot(s) remaining out of"
+    },
+    "detailsStep": {
+      "racketInfo": "Racket information",
+      "racketBrand": "Racket brand",
+      "racketBrandPlaceholder": "Ex: Wilson, Babolat, Head...",
+      "racketModel": "Model (optional)",
+      "racketModelPlaceholder": "Ex: Pro Staff, Pure Drive...",
+      "stringPattern": "String pattern",
+      "stringPatternPlaceholder": "Select pattern",
+      "tension": "String tension",
+      "tensionHorizontal": "Horizontal tension",
+      "tensionHorizontalPlaceholder": "Ex: 25",
+      "tensionVertical": "Vertical tension",
+      "tensionVerticalPlaceholder": "Ex: 24",
+      "unit": "Unit",
+      "stringType": "String type",
+      "ownString": "I'm bringing my own string",
+      "ownStringPrice": "Price: 25 CHF (labor only)",
+      "provideString": "I want you to provide the string",
+      "provideStringPrice": "Price: 25 CHF + string price",
+      "selectString": "What type of string do you want?",
+      "selectStringPlaceholder": "Select a string",
+      "stringPrice": "String price:",
+      "comments": "Comments or special instructions (optional)",
+      "commentsPlaceholder": "Special instructions, preferences..."
+    },
+    "contactStep": {
+      "yourInfo": "Your contact information",
+      "fullName": "Full name",
+      "fullNamePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "john.doe@example.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+41 76 123 45 67",
+      "payment": "Payment method",
+      "paymentOnsite": "On-site payment only",
+      "paymentAccepted": "TWINT or Cash accepted upon delivery",
+      "priceSummary": "Price summary",
+      "labor": "Labor",
+      "string": "String",
+      "total": "Total",
+      "submitting": "Submitting...",
+      "error": "An error occurred"
+    },
+    "confirmation": {
+      "title": "Booking confirmed!",
+      "thankYou": "Thank you for your booking",
+      "message": "You will receive a confirmation email at",
+      "bookingSummary": "Your booking summary",
+      "bookingNumber": "Booking number",
+      "date": "Date",
+      "timeSlot": "Time slot",
+      "racket": "Racket",
+      "tension": "Tension",
+      "stringType": "String type",
+      "ownString": "Own string",
+      "totalPrice": "Total price",
+      "needHelp": "Need help or want to modify your booking?",
+      "contactUs": "Feel free to contact us",
+      "newBooking": "New booking",
+      "backToHome": "Back to home",
+      "nextSteps": {
+        "title": "Next steps",
+        "step1": "You will receive a confirmation email with all details",
+        "step2": "Bring your racket to the booked time slot",
+        "step3": "We will contact you when your racket is ready (24-48h)",
+        "step4": "Pick up your racket and pay on-site (TWINT or Cash)"
+      }
+    }
+  }
+}
+

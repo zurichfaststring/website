@@ -1,0 +1,169 @@
+{
+  "nav": {
+    "reserve": "Réserver",
+    "admin": "Admin"
+  },
+  "hero": {
+    "badge": "Cordage rapide à Zürich",
+    "title": "Votre raquette entre",
+    "titleHighlight": "de bonnes mains",
+    "description": "Cordage rapide à Zürich. Qualité garantie, délai express, prix transparent.",
+    "descriptionHighlight": "Réservez en ligne en 2 minutes.",
+    "reserveNow": "Réserver maintenant",
+    "priceInfo": "TWINT ou Cash • 25 CHF",
+    "location": "Dépôt/Retrait : 8037 Zürich",
+    "locationDetails": "L'adresse exacte sera communiquée par email après réservation",
+    "contactTitle": "Des questions ? Contactez-nous"
+  },
+  "howItWorks": {
+    "title": "Comment ça marche ?",
+    "subtitle": "Réservez votre cordage en 3 étapes simples",
+    "step1": {
+      "title": "Réservez en ligne",
+      "description": "Choisissez votre date et créneau, renseignez les détails de cordage souhaités en quelques clics."
+    },
+    "step2": {
+      "title": "Déposez votre raquette",
+      "description": "Apportez votre raquette directement au créneau réservé. Dépôt en main propre uniquement."
+    },
+    "step3": {
+      "title": "Récupérez votre raquette",
+      "description": "Notification dès que prête. Récupération en main propre sous 24-48h."
+    }
+  },
+  "features": {
+    "title": "Pourquoi nous choisir ?",
+    "subtitle": "Un service de qualité avec des avantages concrets",
+    "price": {
+      "title": "Prix fixe",
+      "value": "25 CHF",
+      "description": "par raquette<br/>(main-d'œuvre uniquement)"
+    },
+    "speed": {
+      "title": "Délai rapide",
+      "value": "24-48h",
+      "description": "délai standard<br/>de traitement"
+    },
+    "local": {
+      "title": "Zone Zürich",
+      "value": "Local",
+      "description": "service basé<br/>à Zürich"
+    },
+    "booking": {
+      "title": "Réservation simple",
+      "value": "En ligne",
+      "description": "réservez votre<br/>créneau 24/7"
+    }
+  },
+  "cta": {
+    "badge": "Disponible maintenant",
+    "title": "Prêt à faire corder votre raquette ?",
+    "description": "Réservez votre créneau en 2 minutes. Simple, rapide, efficace.",
+    "reserve": "Réserver maintenant",
+    "paymentInfo": "TWINT ou Cash",
+    "deliveryInfo": "Délai 24-48h"
+  },
+  "footer": {
+    "description": "Cordage rapide de raquettes de tennis à Zürich.",
+    "quickLinks": "Liens rapides",
+    "home": "Accueil",
+    "booking": "Réserver",
+    "admin": "Admin",
+    "contactTitle": "Contact & Localisation",
+    "location": "Dépôt/Retrait : 8037 Zürich",
+    "locationNote": "L'adresse exacte sera communiquée par email après réservation",
+    "schedule": "Lun-Sam: 9h-18h",
+    "copyright": "© 2025 Zurich Fast String. Tous droits réservés."
+  },
+  "booking": {
+    "title": "Réservation",
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Confirmer la réservation",
+    "steps": {
+      "date": "Date",
+      "details": "Détails",
+      "contact": "Contact"
+    },
+    "dateStep": {
+      "title": "Choisissez une date",
+      "timeSlot": "Créneau horaire",
+      "morning": "Matin avant 10h",
+      "morningDesc": "Dépôt avant 10h",
+      "afternoon": "Après-midi après 18h",
+      "afternoonDesc": "Dépôt après 18h",
+      "notAvailable": "Cette date n'est pas disponible. Capacité atteinte (2 raquettes/jour).",
+      "available": "Cette date est entièrement disponible.",
+      "slotsRemaining": "créneau(x) restant(s) sur"
+    },
+    "detailsStep": {
+      "racketInfo": "Informations sur la raquette",
+      "racketBrand": "Marque de la raquette",
+      "racketBrandPlaceholder": "Ex: Wilson, Babolat, Head...",
+      "racketModel": "Modèle (optionnel)",
+      "racketModelPlaceholder": "Ex: Pro Staff, Pure Drive...",
+      "stringPattern": "Schéma de cordage",
+      "stringPatternPlaceholder": "Sélectionnez le schéma",
+      "tension": "Tension du cordage",
+      "tensionHorizontal": "Tension horizontale",
+      "tensionHorizontalPlaceholder": "Ex: 25",
+      "tensionVertical": "Tension verticale",
+      "tensionVerticalPlaceholder": "Ex: 24",
+      "unit": "Unité",
+      "stringType": "Type de cordage",
+      "ownString": "J'apporte mon propre cordage",
+      "ownStringPrice": "Prix: 25 CHF (main-d'œuvre uniquement)",
+      "provideString": "Je souhaite que vous fournissiez le cordage",
+      "provideStringPrice": "Prix: 25 CHF + prix du cordage",
+      "selectString": "Quel type de cordage souhaitez-vous ?",
+      "selectStringPlaceholder": "Sélectionnez un cordage",
+      "stringPrice": "Prix du cordage:",
+      "comments": "Commentaires ou instructions spéciales (optionnel)",
+      "commentsPlaceholder": "Instructions particulières, préférences..."
+    },
+    "contactStep": {
+      "yourInfo": "Vos coordonnées",
+      "fullName": "Nom complet",
+      "fullNamePlaceholder": "Jean Dupont",
+      "email": "Email",
+      "emailPlaceholder": "jean.dupont@example.com",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+41 76 123 45 67",
+      "payment": "Mode de paiement",
+      "paymentOnsite": "Paiement sur place uniquement",
+      "paymentAccepted": "TWINT ou Cash acceptés lors de la remise",
+      "priceSummary": "Récapitulatif du prix",
+      "labor": "Main-d'œuvre",
+      "string": "Cordage",
+      "total": "Total",
+      "submitting": "Envoi en cours...",
+      "error": "Une erreur est survenue"
+    },
+    "confirmation": {
+      "title": "Réservation confirmée !",
+      "thankYou": "Merci pour votre réservation",
+      "message": "Vous allez recevoir un email de confirmation à",
+      "bookingSummary": "Récapitulatif de votre réservation",
+      "bookingNumber": "Numéro de réservation",
+      "date": "Date",
+      "timeSlot": "Créneau",
+      "racket": "Raquette",
+      "tension": "Tension",
+      "stringType": "Type de cordage",
+      "ownString": "Cordage personnel",
+      "totalPrice": "Prix total",
+      "needHelp": "Besoin d'aide ou de modifier votre réservation ?",
+      "contactUs": "N'hésitez pas à nous contacter",
+      "newBooking": "Nouvelle réservation",
+      "backToHome": "Retour à l'accueil",
+      "nextSteps": {
+        "title": "Prochaines étapes",
+        "step1": "Vous recevrez un email de confirmation avec tous les détails",
+        "step2": "Apportez votre raquette au créneau réservé",
+        "step3": "Nous vous contacterons quand votre raquette sera prête (24-48h)",
+        "step4": "Récupérez votre raquette et effectuez le paiement sur place (TWINT ou Cash)"
+      }
+    }
+  }
+}
+

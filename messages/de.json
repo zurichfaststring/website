@@ -1,0 +1,169 @@
+{
+  "nav": {
+    "reserve": "Buchen",
+    "admin": "Admin"
+  },
+  "hero": {
+    "badge": "Schnelles Besaiten in Zürich",
+    "title": "Ihr Schläger in",
+    "titleHighlight": "guten Händen",
+    "description": "Schnelles Besaiten in Zürich. Garantierte Qualität, Express-Lieferung, transparente Preise.",
+    "descriptionHighlight": "In 2 Minuten online buchen.",
+    "reserveNow": "Jetzt buchen",
+    "priceInfo": "TWINT oder Bar • 25 CHF",
+    "location": "Abholung/Rückgabe: 8037 Zürich",
+    "locationDetails": "Die genaue Adresse wird nach der Buchung per E-Mail mitgeteilt",
+    "contactTitle": "Fragen? Kontaktieren Sie uns"
+  },
+  "howItWorks": {
+    "title": "Wie funktioniert's?",
+    "subtitle": "Buchen Sie Ihre Besaitung in 3 einfachen Schritten",
+    "step1": {
+      "title": "Online buchen",
+      "description": "Wählen Sie Datum und Zeitfenster, geben Sie die gewünschten Besaitungsdetails in wenigen Klicks an."
+    },
+    "step2": {
+      "title": "Schläger abgeben",
+      "description": "Bringen Sie Ihren Schläger direkt zum reservierten Zeitfenster. Nur persönliche Abgabe."
+    },
+    "step3": {
+      "title": "Schläger abholen",
+      "description": "Benachrichtigung sobald fertig. Persönliche Abholung innerhalb von 24-48h."
+    }
+  },
+  "features": {
+    "title": "Warum uns wählen?",
+    "subtitle": "Ein Qualitätsservice mit konkreten Vorteilen",
+    "price": {
+      "title": "Festpreis",
+      "value": "25 CHF",
+      "description": "pro Schläger<br/>(nur Arbeitskosten)"
+    },
+    "speed": {
+      "title": "Schnelle Lieferung",
+      "value": "24-48h",
+      "description": "Standard-<br/>Bearbeitungszeit"
+    },
+    "local": {
+      "title": "Region Zürich",
+      "value": "Lokal",
+      "description": "Service in<br/>Zürich"
+    },
+    "booking": {
+      "title": "Einfache Buchung",
+      "value": "Online",
+      "description": "Buchen Sie<br/>24/7"
+    }
+  },
+  "cta": {
+    "badge": "Jetzt verfügbar",
+    "title": "Bereit, Ihren Schläger besaiten zu lassen?",
+    "description": "Buchen Sie Ihren Termin in 2 Minuten. Einfach, schnell, effizient.",
+    "reserve": "Jetzt buchen",
+    "paymentInfo": "TWINT oder Bar",
+    "deliveryInfo": "Lieferzeit 24-48h"
+  },
+  "footer": {
+    "description": "Schnelles Besaiten von Tennisschlägern in Zürich.",
+    "quickLinks": "Schnellzugriff",
+    "home": "Startseite",
+    "booking": "Buchen",
+    "admin": "Admin",
+    "contactTitle": "Kontakt & Standort",
+    "location": "Abholung/Rückgabe: 8037 Zürich",
+    "locationNote": "Die genaue Adresse wird nach der Buchung per E-Mail mitgeteilt",
+    "schedule": "Mo-Sa: 9-18 Uhr",
+    "copyright": "© 2025 Zurich Fast String. Alle Rechte vorbehalten."
+  },
+  "booking": {
+    "title": "Buchung",
+    "back": "Zurück",
+    "next": "Weiter",
+    "submit": "Buchung bestätigen",
+    "steps": {
+      "date": "Datum",
+      "details": "Details",
+      "contact": "Kontakt"
+    },
+    "dateStep": {
+      "title": "Wählen Sie ein Datum",
+      "timeSlot": "Zeitfenster",
+      "morning": "Vormittag vor 10 Uhr",
+      "morningDesc": "Abgabe vor 10 Uhr",
+      "afternoon": "Nachmittag nach 18 Uhr",
+      "afternoonDesc": "Abgabe nach 18 Uhr",
+      "notAvailable": "Dieses Datum ist nicht verfügbar. Kapazität erreicht (2 Schläger/Tag).",
+      "available": "Dieses Datum ist vollständig verfügbar.",
+      "slotsRemaining": "Zeitfenster verfügbar von"
+    },
+    "detailsStep": {
+      "racketInfo": "Informationen zum Schläger",
+      "racketBrand": "Schlägermarke",
+      "racketBrandPlaceholder": "Z.B.: Wilson, Babolat, Head...",
+      "racketModel": "Modell (optional)",
+      "racketModelPlaceholder": "Z.B.: Pro Staff, Pure Drive...",
+      "stringPattern": "Besaitungsmuster",
+      "stringPatternPlaceholder": "Muster auswählen",
+      "tension": "Besaitungsspannung",
+      "tensionHorizontal": "Horizontale Spannung",
+      "tensionHorizontalPlaceholder": "Z.B.: 25",
+      "tensionVertical": "Vertikale Spannung",
+      "tensionVerticalPlaceholder": "Z.B.: 24",
+      "unit": "Einheit",
+      "stringType": "Saitentyp",
+      "ownString": "Ich bringe meine eigene Saite mit",
+      "ownStringPrice": "Preis: 25 CHF (nur Arbeitskosten)",
+      "provideString": "Ich möchte, dass Sie die Saite bereitstellen",
+      "provideStringPrice": "Preis: 25 CHF + Saitenpreis",
+      "selectString": "Welchen Saitentyp möchten Sie?",
+      "selectStringPlaceholder": "Saite auswählen",
+      "stringPrice": "Saitenpreis:",
+      "comments": "Kommentare oder spezielle Anweisungen (optional)",
+      "commentsPlaceholder": "Besondere Anweisungen, Präferenzen..."
+    },
+    "contactStep": {
+      "yourInfo": "Ihre Kontaktdaten",
+      "fullName": "Vollständiger Name",
+      "fullNamePlaceholder": "Max Mustermann",
+      "email": "E-Mail",
+      "emailPlaceholder": "max.mustermann@example.com",
+      "phone": "Telefon",
+      "phonePlaceholder": "+41 76 123 45 67",
+      "payment": "Zahlungsart",
+      "paymentOnsite": "Nur Zahlung vor Ort",
+      "paymentAccepted": "TWINT oder Bar akzeptiert bei Abholung",
+      "priceSummary": "Preiszusammenfassung",
+      "labor": "Arbeitskosten",
+      "string": "Saite",
+      "total": "Gesamt",
+      "submitting": "Wird gesendet...",
+      "error": "Ein Fehler ist aufgetreten"
+    },
+    "confirmation": {
+      "title": "Buchung bestätigt!",
+      "thankYou": "Vielen Dank für Ihre Buchung",
+      "message": "Sie erhalten eine Bestätigungs-E-Mail an",
+      "bookingSummary": "Zusammenfassung Ihrer Buchung",
+      "bookingNumber": "Buchungsnummer",
+      "date": "Datum",
+      "timeSlot": "Zeitfenster",
+      "racket": "Schläger",
+      "tension": "Spannung",
+      "stringType": "Saitentyp",
+      "ownString": "Eigene Saite",
+      "totalPrice": "Gesamtpreis",
+      "needHelp": "Benötigen Sie Hilfe oder möchten Sie Ihre Buchung ändern?",
+      "contactUs": "Kontaktieren Sie uns gerne",
+      "newBooking": "Neue Buchung",
+      "backToHome": "Zurück zur Startseite",
+      "nextSteps": {
+        "title": "Nächste Schritte",
+        "step1": "Sie erhalten eine Bestätigungs-E-Mail mit allen Details",
+        "step2": "Bringen Sie Ihren Schläger zum gebuchten Termin",
+        "step3": "Wir kontaktieren Sie, wenn Ihr Schläger fertig ist (24-48h)",
+        "step4": "Holen Sie Ihren Schläger ab und bezahlen Sie vor Ort (TWINT oder Bar)"
+      }
+    }
+  }
+}
+

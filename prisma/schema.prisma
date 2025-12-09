@@ -1,0 +1,64 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Booking {
+  id                String   @id @default(cuid())
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  // Date et créneau
+  bookingDate       DateTime
+  timeSlot          String   // "morning", "afternoon", "any"
+  
+  // Détails de la raquette
+  racketBrand       String
+  racketModel       String?
+  stringPattern     String   // "16x19", "18x20", etc.
+  
+  // Détails du cordage
+  tensionHorizontal Float
+  tensionVertical   Float
+  tensionUnit       String   // "kg" ou "lbs"
+  stringType        String   // "client" (client fournit) ou nom du cordage si fourni
+  stringProvided    Boolean  @default(false) // true si on fournit le cordage
+  
+  // Prix
+  laborPrice        Float    @default(25.0)
+  stringPrice       Float?   // Prix du cordage si fourni
+  totalPrice        Float
+  
+  // Client
+  clientName        String
+  clientEmail       String
+  clientPhone       String
+  comments          String?
+  
+  // Paiement
+  paymentMethod     String   @default("onsite") // "onsite", "online", "twint", "paypal"
+  paymentStatus     String   @default("pending") // "pending", "paid"
+  
+  // Statut
+  status            String   @default("booked") // "booked", "received", "in_progress", "ready", "delivered", "cancelled"
+}
+
+model Settings {
+  id                String   @id @default(cuid())
+  dailyCapacity     Int      @default(2)
+  updatedAt         DateTime @updatedAt
+}
+
+model ClosedDay {
+  id                String   @id @default(cuid())
+  date              DateTime @unique
+  reason            String?
+  createdAt         DateTime @default(now())
+}
