@@ -16,11 +16,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Zurich Fast String - Professional Stringing Service",
   description: "Professional and fast tennis racket stringing service in Zürich. 25 CHF per racket, 24-48h turnaround. Simple online booking.",
-  icons: {
-    icon: '/logo-min.png',
-    shortcut: '/logo-min.png',
-    apple: '/logo-min.png',
-  },
 };
 
 export default function RootLayout({
