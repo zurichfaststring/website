@@ -39,3 +39,4 @@ Add these environment variables in your Vercel project settings:
 - **ALWAYS** use a strong password for `ADMIN_PASSWORD`
 - For production, consider using a proper authentication system (e.g., NextAuth.js)
 
+

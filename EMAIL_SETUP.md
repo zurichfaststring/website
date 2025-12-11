@@ -165,3 +165,4 @@ Sur Vercel :
 - Documentation Resend : [resend.com/docs](https://resend.com/docs)
 - Dashboard : [resend.com/dashboard](https://resend.com/dashboard)
 
+

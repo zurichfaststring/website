@@ -115,3 +115,4 @@ Page admin (/admin)
 **Date de mise à jour :** 4 octobre 2025  
 **Status :** ✅ Complété et testé  
 **Aucune erreur de linter**
+

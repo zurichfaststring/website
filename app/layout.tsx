@@ -14,8 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zurich Fast String - Service de cordage rapide et professionnel",
-  description: "Service de cordage rapide de raquettes de tennis à Zürich. 25 CHF par raquette, délai 24-48h. Réservation en ligne simple et rapide.",
+  title: "Zurich Fast String - Professional Stringing Service",
+  description: "Professional and fast tennis racket stringing service in Zürich. 25 CHF per racket, 24-48h turnaround. Simple online booking.",
+  icons: {
+    icon: '/logo-min.png',
+    shortcut: '/logo-min.png',
+    apple: '/logo-min.png',
+  },
 };
 
 export default function RootLayout({
@@ -24,12 +29,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <TranslationProvider>
-          {children}
+        {children}
         </TranslationProvider>
       </body>
     </html>
