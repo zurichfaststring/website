@@ -18,8 +18,6 @@ async function main() {
   } else {
     console.log('✅ Settings already exist:', existingSettings);
   }
-
-  console.log('✅ Created settings:', settings);
 }
 
 main()
