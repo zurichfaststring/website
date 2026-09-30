@@ -17,7 +17,7 @@ export default function Logo({ size = "md", showText = true }: LogoProps) {
       <div className={`${sizeClasses[size]} relative group-hover:scale-105 transition-all z-10 flex-shrink-0`}>
         <Image
           src="/logo.png"
-          alt="Zurich Fast String Logo"
+          alt="Zurich Fast String - tennis racket stringing in Zürich"
           width={size === "sm" ? 128 : size === "md" ? 128 : 208}
           height={size === "sm" ? 128 : size === "md" ? 128 : 208}
           className="object-contain"
@@ -26,9 +26,10 @@ export default function Logo({ size = "md", showText = true }: LogoProps) {
       </div>
       {showText && (
         <div className="hidden sm:flex flex-col">
-          <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 leading-none">
+          {/* Not a heading: each page keeps a single H1 for its main topic. */}
+          <p className="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 leading-none">
             Zurich <span className="text-brand">Fast</span> String
-          </h1>
+          </p>
         </div>
       )}
     </div>

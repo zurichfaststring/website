@@ -8,9 +8,9 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { format } from "date-fns";
 import { fr, de, enUS } from "date-fns/locale";
-import { BookingData } from "@/app/booking/page";
+import type { BookingData } from "@/lib/booking-types";
 import { AlertCircle } from "lucide-react";
-import { useTranslations } from "@/lib/translations";
+import { useLocale, useTranslations } from "next-intl";
 
 type DateStepProps = {
   bookingData: BookingData;
@@ -31,16 +31,8 @@ export default function DateStep({ bookingData, updateBookingData, onNext }: Dat
   const [timeSlot, setTimeSlot] = useState<string>(bookingData.timeSlot || "");
   const [availability, setAvailability] = useState<AvailabilityInfo | null>(null);
   const [loading, setLoading] = useState(false);
-  const [currentLocale, setCurrentLocale] = useState(enUS);
-  
-  // Get locale based on stored language
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const lang = localStorage.getItem("language") || "en";
-      const locale = lang === "de" ? de : lang === "fr" ? fr : enUS;
-      setCurrentLocale(locale);
-    }
-  }, []);
+  const lang = useLocale();
+  const currentLocale = lang === "de" ? de : lang === "fr" ? fr : enUS;
 
   useEffect(() => {
     if (selectedDate) {

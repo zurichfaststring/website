@@ -1,18 +1,41 @@
-"use client";
-
-import Link from "next/link";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
+import { pageMetadata } from "@/lib/seo";
+import LocalBusinessJsonLd from "@/components/seo/LocalBusinessJsonLd";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Clock, MapPin, Sparkles, Award, BadgeCheck } from "lucide-react";
 import Logo from "@/components/Logo";
 import { RacketIcon, TennisBallIcon } from "@/components/icons/TennisIcons";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { useTranslations } from "@/lib/translations";
 
-export default function Home() {
+type Props = { params: Promise<{ locale: Locale }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta.home" });
+  return pageMetadata({
+    href: "/",
+    locale,
+    title: t("title"),
+    description: t("description"),
+  });
+}
+
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <HomeContent locale={locale} />;
+}
+
+function HomeContent({ locale }: { locale: Locale }) {
   const t = useTranslations();
   return (
     <div className="min-h-screen bg-gradient-to-b from-brand-pale via-white to-slate-50">
+      <LocalBusinessJsonLd locale={locale} />
       {/* Navigation */}
       <nav className="border-b bg-white/90 backdrop-blur-md sticky top-0 z-40 shadow-sm">
         <div className="container mx-auto px-2 sm:px-4 py-2 flex justify-between items-center">
@@ -45,10 +68,10 @@ export default function Home() {
             <span>{t("hero.badge")}</span>
           </div>
           
-          <h2 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight min-h-hero-title flex flex-col justify-center">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight min-h-hero-title flex flex-col justify-center">
             <span>{t("hero.title")}</span>
             <span className="text-brand"> {t("hero.titleHighlight")}</span>
-          </h2>
+          </h1>
           <p className="text-xl md:text-2xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
             {t("hero.description")} 
             <span className="font-semibold text-slate-900"> {t("hero.descriptionHighlight")}</span>
@@ -90,7 +113,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t("howItWorks.title")}</h3>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t("howItWorks.title")}</h2>
             <p className="text-lg text-slate-600">{t("howItWorks.subtitle")}</p>
           </div>
           <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
@@ -102,7 +125,7 @@ export default function Home() {
                 <div className="mb-4">
                   <Calendar className="w-8 h-8 text-brand-darker mb-2" />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-3 min-h-[32px]">{t("howItWorks.step1.title")}</h4>
+                <h3 className="text-xl font-bold text-slate-900 mb-3 min-h-[32px]">{t("howItWorks.step1.title")}</h3>
                 <p className="text-slate-600 leading-relaxed flex-1">{t("howItWorks.step1.description")}</p>
               </div>
               {/* Flèche décorative */}
@@ -121,7 +144,7 @@ export default function Home() {
                 <div className="mb-4">
                   <RacketIcon className="w-8 h-8 text-brand-darker" />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-3 min-h-[32px]">{t("howItWorks.step2.title")}</h4>
+                <h3 className="text-xl font-bold text-slate-900 mb-3 min-h-[32px]">{t("howItWorks.step2.title")}</h3>
                 <p className="text-slate-600 leading-relaxed flex-1">{t("howItWorks.step2.description")}</p>
               </div>
               {/* Flèche décorative */}
@@ -140,7 +163,7 @@ export default function Home() {
                 <div className="mb-4">
                   <Award className="w-8 h-8 text-brand-darker mb-2" />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-3 min-h-[32px]">{t("howItWorks.step3.title")}</h4>
+                <h3 className="text-xl font-bold text-slate-900 mb-3 min-h-[32px]">{t("howItWorks.step3.title")}</h3>
                 <p className="text-slate-600 leading-relaxed flex-1">{t("howItWorks.step3.description")}</p>
               </div>
             </div>
@@ -153,7 +176,7 @@ export default function Home() {
       <section className="bg-gradient-to-b from-slate-50 to-white py-20 border-t-2 border-slate-200">
         <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t("features.title")}</h3>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t("features.title")}</h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">{t("features.subtitle")}</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -168,7 +191,7 @@ export default function Home() {
             </CardHeader>
             <CardContent className="text-center flex-1 flex flex-col justify-center">
               <p className="text-3xl font-bold text-brand-darker mb-2">{t("features.price.value")}</p>
-              <p className="text-sm text-slate-600 min-h-[40px]" dangerouslySetInnerHTML={{__html: t("features.price.description")}}></p>
+              <p className="text-sm text-slate-600 min-h-[40px] whitespace-pre-line">{t("features.price.description")}</p>
             </CardContent>
           </Card>
 
@@ -183,7 +206,7 @@ export default function Home() {
             </CardHeader>
             <CardContent className="text-center flex-1 flex flex-col justify-center">
               <p className="text-3xl font-bold text-brand-darker mb-2">{t("features.speed.value")}</p>
-              <p className="text-sm text-slate-600 min-h-[40px]" dangerouslySetInnerHTML={{__html: t("features.speed.description")}}></p>
+              <p className="text-sm text-slate-600 min-h-[40px] whitespace-pre-line">{t("features.speed.description")}</p>
             </CardContent>
           </Card>
 
@@ -198,7 +221,7 @@ export default function Home() {
             </CardHeader>
             <CardContent className="text-center flex-1 flex flex-col justify-center">
               <p className="text-3xl font-bold text-brand-darker mb-2">{t("features.local.value")}</p>
-              <p className="text-sm text-slate-600 min-h-[40px]" dangerouslySetInnerHTML={{__html: t("features.local.description")}}></p>
+              <p className="text-sm text-slate-600 min-h-[40px] whitespace-pre-line">{t("features.local.description")}</p>
             </CardContent>
           </Card>
 
@@ -213,7 +236,7 @@ export default function Home() {
             </CardHeader>
             <CardContent className="text-center flex-1 flex flex-col justify-center">
               <p className="text-3xl font-bold text-brand-darker mb-2">{t("features.booking.value")}</p>
-              <p className="text-sm text-slate-600 min-h-[40px]" dangerouslySetInnerHTML={{__html: t("features.booking.description")}}></p>
+              <p className="text-sm text-slate-600 min-h-[40px] whitespace-pre-line">{t("features.booking.description")}</p>
             </CardContent>
           </Card>
         </div>
@@ -229,7 +252,7 @@ export default function Home() {
             <TennisBallIcon />
             <span>{t("cta.badge")}</span>
           </div>
-          <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{t("cta.title")}</h3>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{t("cta.title")}</h2>
           <p className="text-xl text-slate-700 mb-10 leading-relaxed">
             {t("cta.description")}
           </p>
@@ -265,15 +288,14 @@ export default function Home() {
               <p className="text-sm text-slate-600">{t("footer.description")}</p>
             </div>
             <div>
-              <h5 className="font-semibold text-slate-900 mb-4">{t("footer.quickLinks")}</h5>
+              <h3 className="font-semibold text-slate-900 mb-4">{t("footer.quickLinks")}</h3>
               <ul className="space-y-2 text-sm text-slate-600">
                 <li><Link href="/" className="hover:text-brand transition-colors">{t("footer.home")}</Link></li>
                 <li><Link href="/booking" className="hover:text-brand transition-colors">{t("footer.booking")}</Link></li>
-                <li><Link href="/admin" className="hover:text-brand transition-colors">{t("footer.admin")}</Link></li>
               </ul>
             </div>
             <div>
-              <h5 className="font-semibold text-slate-900 mb-4">{t("footer.contactTitle")}</h5>
+              <h3 className="font-semibold text-slate-900 mb-4">{t("footer.contactTitle")}</h3>
               <ul className="space-y-2 text-sm text-slate-600">
                 <li>📧 <a href="mailto:info@zurichfaststring.ch" className="hover:text-brand transition-colors">info@zurichfaststring.ch</a></li>
                 <li>📱 <a href="https://wa.me/41782074677" target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">+41 78 207 46 77 (WhatsApp)</a></li>

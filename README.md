@@ -22,12 +22,20 @@ Application web de réservation de cordage rapide de raquettes de tennis à Zür
 
 ## 🛠️ Technologies
 
-- **Framework** : Next.js 15 (App Router)
+- **Framework** : Next.js 16 (App Router)
 - **Language** : TypeScript
 - **Styling** : Tailwind CSS + shadcn/ui
 - **Base de données** : Prisma ORM + SQLite (dev) / PostgreSQL (prod)
 - **Authentification** : Session storage (MVP) - à améliorer pour la production
 - **Emails** : Prêt pour Resend ou Nodemailer
+
+## 🔎 SEO & langues
+
+- URLs par langue : `/` (anglais), `/de` (allemand), `/fr` (français), via `next-intl` (`i18n/routing.ts`, `proxy.ts`). Les traductions sont rendues côté serveur, donc visibles par Google.
+- Titres, descriptions, canonical et balises hreflang : `lib/seo.ts`, textes dans `messages/*.json` (clé `meta`).
+- Données structurées LocalBusiness : `components/seo/LocalBusinessJsonLd.tsx`.
+- `robots.txt` et `sitemap.xml` : `app/robots.ts`, `app/sitemap.ts`. La page admin est en `noindex`.
+- Hors code, à faire pour le référencement local : créer une fiche Google Business Profile, soumettre le sitemap dans Google Search Console, s'inscrire sur local.ch / search.ch.
 
 ## 📦 Installation
 

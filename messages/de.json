@@ -5,8 +5,8 @@
   },
   "hero": {
     "badge": "Schnelles Besaiten in Zürich",
-    "title": "Ihr Schläger in",
-    "titleHighlight": "guten Händen",
+    "title": "Tennisschläger besaiten",
+    "titleHighlight": "in Zürich",
     "description": "Schnelles Besaiten in Zürich. Garantierte Qualität, Express-Lieferung, transparente Preise.",
     "descriptionHighlight": "In 2 Minuten online buchen.",
     "reserveNow": "Jetzt buchen",
@@ -37,22 +37,22 @@
     "price": {
       "title": "Festpreis",
       "value": "25 CHF",
-      "description": "pro Schläger<br/>(nur Arbeitskosten)"
+      "description": "pro Schläger\n(nur Arbeitskosten)"
     },
     "speed": {
       "title": "Schnelle Lieferung",
       "value": "24-48h",
-      "description": "Standard-<br/>Bearbeitungszeit"
+      "description": "Standard-\nBearbeitungszeit"
     },
     "local": {
       "title": "Region Zürich",
       "value": "Lokal",
-      "description": "Service in<br/>Zürich"
+      "description": "Service in\nZürich"
     },
     "booking": {
       "title": "Einfache Buchung",
       "value": "Online",
-      "description": "Buchen Sie<br/>24/7"
+      "description": "Buchen Sie\n24/7"
     }
   },
   "cta": {
@@ -164,6 +164,15 @@
         "step4": "Holen Sie Ihren Schläger ab und bezahlen Sie vor Ort (TWINT oder Bar)"
       }
     }
+  },
+  "meta": {
+    "home": {
+      "title": "Tennisschläger besaiten in Zürich – 25 CHF, 24–48h | Zurich Fast String",
+      "description": "Professionelle Besaitung und Bespannung von Tennisschlägern in Zürich (8037). Fixpreis 25 CHF pro Schläger, fertig in 24–48h, online in 2 Minuten buchen. Abgabe und Abholung in Zürich, Zahlung per TWINT oder bar."
+    },
+    "booking": {
+      "title": "Besaitung online buchen | Zurich Fast String",
+      "description": "Buchen Sie Ihre Tennisschläger-Besaitung in Zürich in 3 Schritten: Datum wählen, Schläger und Spannung angeben, bestätigen. 25 CHF, fertig in 24–48h."
+    }
   }
 }
-

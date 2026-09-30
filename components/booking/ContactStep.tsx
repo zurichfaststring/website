@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { BookingData } from "@/app/booking/page";
+import type { BookingData } from "@/lib/booking-types";
 import { AlertCircle, BadgeCheck } from "lucide-react";
-import { useTranslations } from "@/lib/translations";
+import { useLocale, useTranslations } from "next-intl";
 
 type ContactStepProps = {
   bookingData: BookingData;
@@ -19,6 +19,7 @@ type ContactStepProps = {
 export default function ContactStep({ bookingData, updateBookingData, onBack, onComplete }: ContactStepProps) {
   const t = useTranslations('booking.contactStep');
   const tBooking = useTranslations('booking');
+  const locale = useLocale();
   const [clientName, setClientName] = useState(bookingData.clientName || "");
   const [clientEmail, setClientEmail] = useState(bookingData.clientEmail || "");
   const [clientPhone, setClientPhone] = useState(bookingData.clientPhone || "");
@@ -47,9 +48,6 @@ export default function ContactStep({ bookingData, updateBookingData, onBack, on
     setError("");
 
     try {
-      // Get current language from localStorage
-      const locale = typeof window !== 'undefined' ? localStorage.getItem('language') || 'en' : 'en';
-      
       const response = await fetch("/api/bookings", {
         method: "POST",
         headers: {

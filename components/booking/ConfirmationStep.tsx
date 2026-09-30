@@ -1,14 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { CheckCircle2 } from "lucide-react";
 import { format } from "date-fns";
 import { fr, de, enUS } from "date-fns/locale";
-import { BookingData } from "@/app/booking/page";
-import { useTranslations } from "@/lib/translations";
-import { useState, useEffect } from "react";
+import type { BookingData } from "@/lib/booking-types";
+import { useLocale, useTranslations } from "next-intl";
 
 type ConfirmationStepProps = {
   bookingData: BookingData;
@@ -16,13 +15,7 @@ type ConfirmationStepProps = {
 
 export default function ConfirmationStep({ bookingData }: ConfirmationStepProps) {
   const t = useTranslations('booking.confirmation');
-  const [currentLocale, setCurrentLocale] = useState('en');
-  
-  useEffect(() => {
-    // Get language from localStorage
-    const locale = localStorage.getItem('language') || 'en';
-    setCurrentLocale(locale);
-  }, []);
+  const currentLocale = useLocale();
   
   const getLocale = (locale: string) => {
     switch (locale) {

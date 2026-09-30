@@ -1,7 +1,7 @@
 "use client";
 
 import { Check } from "lucide-react";
-import { useTranslations } from "@/lib/translations";
+import { useTranslations } from "next-intl";
 
 type StepIndicatorProps = {
   currentStep: number;

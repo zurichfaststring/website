@@ -1,7 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Globe } from "lucide-react";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -10,50 +12,45 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const languages = [
-  { code: "fr", name: "Français", flag: "🇫🇷" },
-  { code: "de", name: "Deutsch", flag: "🇩🇪" },
-  { code: "en", name: "English", flag: "🇬🇧" },
-];
+const languages: Record<Locale, { name: string; flag: string }> = {
+  fr: { name: "Français", flag: "🇫🇷" },
+  de: { name: "Deutsch", flag: "🇩🇪" },
+  en: { name: "English", flag: "🇬🇧" },
+};
 
 export default function LanguageSwitcher() {
-  const [currentLang, setCurrentLang] = useState("en");
+  const currentLang = useLocale() as Locale;
+  const pathname = usePathname();
+  const router = useRouter();
 
-  useEffect(() => {
-    const saved = localStorage.getItem("language") || "en";
-    setCurrentLang(saved);
-  }, []);
-
-  const changeLanguage = (langCode: string) => {
-    setCurrentLang(langCode);
-    localStorage.setItem("language", langCode);
-    window.location.reload(); // Recharge pour appliquer les traductions
+  const changeLanguage = (locale: Locale) => {
+    // Same page, different locale prefix (e.g. /booking -> /de/booking).
+    router.replace(pathname, { locale });
   };
 
-  const current = languages.find(lang => lang.code === currentLang);
+  const current = languages[currentLang];
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-2">
+        <Button variant="ghost" size="sm" className="gap-2" aria-label="Language">
           <Globe className="w-4 h-4" />
-          <span className="hidden sm:inline">{current?.flag} {current?.name}</span>
-          <span className="sm:hidden">{current?.flag}</span>
+          <span className="hidden sm:inline">{current.flag} {current.name}</span>
+          <span className="sm:hidden">{current.flag}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {languages.map((lang) => (
+        {routing.locales.map((code) => (
           <DropdownMenuItem
-            key={lang.code}
-            onClick={() => changeLanguage(lang.code)}
-            className={currentLang === lang.code ? "bg-brand-pale font-semibold" : ""}
+            key={code}
+            onClick={() => changeLanguage(code)}
+            className={currentLang === code ? "bg-brand-pale font-semibold" : ""}
           >
-            <span className="mr-2">{lang.flag}</span>
-            {lang.name}
+            <span className="mr-2">{languages[code].flag}</span>
+            {languages[code].name}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );
 }
-

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Logo from "@/components/Logo";
@@ -12,35 +12,10 @@ import DateStep from "@/components/booking/DateStep";
 import DetailsStep from "@/components/booking/DetailsStep";
 import ContactStep from "@/components/booking/ContactStep";
 import ConfirmationStep from "@/components/booking/ConfirmationStep";
-import { useTranslations } from "@/lib/translations";
+import type { BookingData } from "@/lib/booking-types";
+import { useTranslations } from "next-intl";
 
-export type BookingData = {
-  // Étape 1: Date
-  bookingDate?: Date;
-  timeSlot?: string;
-  
-  // Étape 2: Détails
-  racketBrand?: string;
-  racketModel?: string;
-  stringPattern?: string;
-  tensionHorizontal?: number;
-  tensionVertical?: number;
-  tensionUnit?: string;
-  stringType?: string;
-  stringProvided?: boolean;
-  comments?: string;
-  
-  // Étape 3: Contact
-  clientName?: string;
-  clientEmail?: string;
-  clientPhone?: string;
-  paymentMethod?: string;
-  
-  // Résultat
-  bookingId?: string;
-};
-
-export default function BookingPage() {
+export default function BookingWizard() {
   const t = useTranslations();
   const [step, setStep] = useState(1);
   const [bookingData, setBookingData] = useState<BookingData>({});

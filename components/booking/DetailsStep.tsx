@@ -8,8 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CheckCircle } from "lucide-react";
-import { BookingData } from "@/app/booking/page";
-import { useTranslations } from "@/lib/translations";
+import type { BookingData } from "@/lib/booking-types";
+import { useTranslations } from "next-intl";
 
 type DetailsStepProps = {
   bookingData: BookingData;

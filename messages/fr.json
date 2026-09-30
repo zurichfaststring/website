@@ -5,8 +5,8 @@
   },
   "hero": {
     "badge": "Cordage rapide à Zürich",
-    "title": "Votre raquette entre",
-    "titleHighlight": "de bonnes mains",
+    "title": "Cordage de raquette de tennis",
+    "titleHighlight": "à Zurich",
     "description": "Cordage rapide à Zürich. Qualité garantie, délai express, prix transparent.",
     "descriptionHighlight": "Réservez en ligne en 2 minutes.",
     "reserveNow": "Réserver maintenant",
@@ -37,22 +37,22 @@
     "price": {
       "title": "Prix fixe",
       "value": "25 CHF",
-      "description": "par raquette<br/>(main-d'œuvre uniquement)"
+      "description": "par raquette\n(main-d'œuvre uniquement)"
     },
     "speed": {
       "title": "Délai rapide",
       "value": "24-48h",
-      "description": "délai standard<br/>de traitement"
+      "description": "délai standard\nde traitement"
     },
     "local": {
       "title": "Zone Zürich",
       "value": "Local",
-      "description": "service basé<br/>à Zürich"
+      "description": "service basé\nà Zürich"
     },
     "booking": {
       "title": "Réservation simple",
       "value": "En ligne",
-      "description": "réservez votre<br/>créneau 24/7"
+      "description": "réservez votre\ncréneau 24/7"
     }
   },
   "cta": {
@@ -164,6 +164,15 @@
         "step4": "Récupérez votre raquette et effectuez le paiement sur place (TWINT ou Cash)"
       }
     }
+  },
+  "meta": {
+    "home": {
+      "title": "Cordage de raquette de tennis à Zurich – 25 CHF, 24–48h | Zurich Fast String",
+      "description": "Cordage professionnel de raquettes de tennis à Zurich (8037). Prix fixe 25 CHF par raquette, prête en 24–48h, réservation en ligne en 2 minutes. Dépôt et retrait à Zurich, paiement TWINT ou cash."
+    },
+    "booking": {
+      "title": "Réserver votre cordage en ligne | Zurich Fast String",
+      "description": "Réservez le cordage de votre raquette de tennis à Zurich en 3 étapes : choisissez une date, indiquez votre raquette et la tension, confirmez. 25 CHF, prête en 24–48h."
+    }
   }
 }
-

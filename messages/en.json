@@ -5,8 +5,8 @@
   },
   "hero": {
     "badge": "Fast Stringing in Zurich",
-    "title": "Your racket in",
-    "titleHighlight": "good hands",
+    "title": "Tennis Racket Stringing",
+    "titleHighlight": "in Zürich",
     "description": "Fast stringing in Zurich. Guaranteed quality, express delivery, transparent pricing.",
     "descriptionHighlight": "Book online in 2 minutes.",
     "reserveNow": "Book now",
@@ -37,22 +37,22 @@
     "price": {
       "title": "Fixed price",
       "value": "25 CHF",
-      "description": "per racket<br/>(labor only)"
+      "description": "per racket\n(labor only)"
     },
     "speed": {
       "title": "Fast delivery",
       "value": "24-48h",
-      "description": "standard<br/>processing time"
+      "description": "standard\nprocessing time"
     },
     "local": {
       "title": "Zurich Area",
       "value": "Local",
-      "description": "service based<br/>in Zurich"
+      "description": "service based\nin Zurich"
     },
     "booking": {
       "title": "Simple booking",
       "value": "Online",
-      "description": "book your<br/>slot 24/7"
+      "description": "book your\nslot 24/7"
     }
   },
   "cta": {
@@ -164,6 +164,15 @@
         "step4": "Pick up your racket and pay on-site (TWINT or Cash)"
       }
     }
+  },
+  "meta": {
+    "home": {
+      "title": "Tennis Racket Stringing in Zürich – 25 CHF, 24–48h | Zurich Fast String",
+      "description": "Professional tennis racket stringing in Zürich (8037). Fixed price 25 CHF per racket, ready in 24–48h, book online in 2 minutes. Drop-off and pick-up in Zürich, pay by TWINT or cash."
+    },
+    "booking": {
+      "title": "Book Your Racket Stringing Online | Zurich Fast String",
+      "description": "Book a tennis racket stringing slot in Zürich in 3 steps: choose a date, enter your racket and tension, confirm. 25 CHF, ready in 24–48h."
+    }
   }
 }
-
